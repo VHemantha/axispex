@@ -11,3 +11,209 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.background-section {
+  background-image: url('sss.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* Adjust height as needed */
+  position: relative;
+}
+
+.imgcont{
+  background-image: url('sss.png'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 80vh; /* Adjust height as needed */
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 40%;
+  left: 3%;
+  width: 90%;
+  max-width: 700px;
+  color: white;
+  text-align: left;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .background-section {
+    height: 50vh; /* Reduce height for smaller screens */
+  }
+
+  .overlay {
+    top: 30%;
+    left: 5%;
+    width: 85%;
+    transform: translateX(50px); /* Adjust translation for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-section {
+    height: 40vh; /* Further reduce height for very small screens */
+  }
+
+  .overlay {
+    top: 25%;
+    left: 5%;
+    width: 80%;
+    transform: translateX(20px); /* Further adjust translation */
+  }
+}
+
+
+
+.custom-dropdown .dropdown-menu {
+  background-color: black;
+}
+
+.custom-dropdown .dropdown-item {
+  color: white;
+}
+
+.custom-dropdown .dropdown-item:hover,
+.custom-dropdown .dropdown-item:focus {
+  background-color: #333;
+  color: white;
+}
+
+
+.overlay.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.main-heading {
+  font-size: 2rem; /* Default size */
+}
+
+@media (min-width: 768px) {
+  .main-heading {
+    font-size: 2rem; /* Larger size for wider screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-heading {
+    font-size: 4rem; /* Even larger for very wide screens */
+  }
+}
+
+header{
+  margin: 0;
+}
+
+.svg-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.testimonial-slider {
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack elements vertically on mobile */
+  text-align: center;
+}
+
+.testimonial-image-container {
+  margin-bottom: 15px;
+}
+
+.testimonial-image {
+  width: 100%;
+  max-width: 150px; /* Adjust image size for mobile */
+  border-radius: 50%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-text-container {
+  margin-top: 10px;
+}
+
+.testimonial-text {
+  font-size: 1rem; /* Adjust text size for mobile */
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 10px;
+  position: relative;
+}
+
+.progress {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: progressAnimation 5s linear infinite;
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Tablet and up */
+  .testimonial-content {
+    flex-direction: row; /* Side-by-side on larger screens */
+    text-align: left;
+  }
+
+  .testimonial-image-container {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .testimonial-text-container {
+    margin-top: 0;
+  }
+
+  .testimonial-image {
+    max-width: 200px; /* Adjust image size for larger screens */
+  }
+
+  .testimonial-text {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-name {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-role {
+    font-size: 1rem;
+  }
+}
